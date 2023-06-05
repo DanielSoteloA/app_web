@@ -1,0 +1,114 @@
+<!-- Intro -->
+<section id="intro" class="main style1 dark fullscreen">
+    <div class="content">
+        <header>
+            <h2>Hola</h2>
+        </header>
+        <p>
+            <%= @Intro %><br />
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            <a href='https://github.com/DanielSoteloA' target='_blank'>Github</a>            
+        </p>
+        <footer>
+            <a href="#one" class="button style2 down">More</a>
+        </footer>
+    </div>
+</section>
+
+<!-- One -->
+<section id="one" class="main style2 right dark fullscreen">
+    <div class="content box style2">
+        <header>
+            <h2>¿Que hago?</h2>
+        </header>
+        <p><%= @Quehago %></p>
+    </div>
+    <a href="#two" class="button style2 down anchored">Next</a>
+</section>
+
+<!-- Two -->
+<section id="two" class="main style2 left dark fullscreen">
+    <div class="content box style2">
+        <header>
+            <h2>¿Quien Soy?</h2>
+        </header>
+        <p><%= @Quiensoy %></p>
+    </div>
+    <a href="#work" class="button style2 down anchored">Next</a>
+</section>
+
+<!-- Work -->
+<section id="work" class="main style3 primary">
+    <div class="content">
+        <header>
+            <h2>Mi Trabajo</h2>
+            <p><%= @Mitrabajo %></p>
+        </header>
+
+        <!-- Gallery  -->
+        <div id="gallery" class="gallery">
+
+            <article class="from-left">
+                <%= link_to asset_path 'fulls/01.jpg', class: 'image fit' do %>
+                    <%= image_tag('thumbs/01.jpg', { :title => @galeria1})%>
+                <% end %>
+                <span><%= @galeria1 %></span>
+            </article>
+            <article class="from-right">
+                <%= link_to asset_path 'fulls/02.jpg', class: 'image fit' do %>
+                    <%= image_tag('thumbs/02.jpg', { :title => @galeria2 })%>
+                <% end %>       
+                <span><%= @galeria2 %></span>
+            </article>
+            <article class="from-left">
+                <%= link_to asset_path 'fulls/03.jpg', class: 'image fit' do %>
+                    <%= image_tag('thumbs/03.jpg', { :title => @galeria3 })%>
+                <% end %>
+                <span><%= @galeria3 %></span>
+            </article>
+            <article class="from-right">
+                <%= link_to asset_path 'fulls/04.jpg', class: 'image fit' do %>
+                    <%= image_tag('thumbs/04.jpg', { :title => @galeria4 })%>
+                <% end %>
+                <span><%= @galeria4 %></span>
+            </article>
+            <article class="from-left">
+                <%= link_to asset_path 'fulls/05.jpg', class: 'image fit' do %>
+                    <%= image_tag('thumbs/05.jpg', { :title => @galeria5 })%>
+                <% end %>
+                <span><%= @galeria5 %></span>
+            </article>
+            <article class="from-right">
+                <%= link_to asset_path 'fulls/06.jpg', class: 'image fit' do %>
+                    <%= image_tag('thumbs/06.jpg', { :title => @galeria6 })%>
+                <% end %>
+                <span><%= @galeria6 %></span>
+            </article>
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="main style3 secondary">
+    <div class="content">
+        <header>
+            <h2>Di Hola</h2>
+            <p><%= @Contacto %></p>
+        </header>
+        <div class="box">
+            <form method="post" action="#">
+                <div class="fields">
+                    <div class="field half"><input type="text" name="name" placeholder="Name" /></div>
+                    <div class="field half"><input type="email" name="email" placeholder="Email" /></div>
+                    <div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
+                </div>
+                <ul class="actions special">
+                    <li><input type="submit" value="Send Message" /></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</section>

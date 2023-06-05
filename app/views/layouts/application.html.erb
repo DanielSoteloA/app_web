@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AppVisualArt</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "fontawesome-all.min" %>
+    <%= stylesheet_link_tag "main", :media => "all" %>
+    <%= stylesheet_link_tag "noscript" %>
+
+    <%= javascript_importmap_tags %>
+    
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <h1>Big Picture</h1>
+      <nav>
+        <ul>
+          <li><a href="#intro">Intro</a></li>
+          <li><a href="#one">¿Que hago?</a></li>
+          <li><a href="#two">¿Quien soy?</a></li>
+          <li><a href="#work">Mi trabajo</a></li>
+          <li><a href="#gallery">Galeria proyectos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <%= yield %>
+
+    <!-- Dependencias de JavaScript -->
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'jquery.min' %>
+    <%= javascript_include_tag 'jquery.scrolly.min' %>
+    <%= javascript_include_tag 'jquery.scrollex.min' %>
+    <%= javascript_include_tag 'browser.min' %>
+    <%= javascript_include_tag 'breakpoints.min' %>
+    <%= javascript_include_tag 'util' %>
+    <%= javascript_include_tag 'main' %>
+  </body>
+</html>
